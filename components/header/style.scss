@@ -1,0 +1,32 @@
+header {
+  background-color: $dark;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  li {
+    margin-left: 1rem;
+
+    a {
+      color: $light;
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

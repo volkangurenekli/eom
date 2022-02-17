@@ -1,0 +1,35 @@
+type Query {
+  employees(id: ID): [Employee] @listLength(min: 3, max: 8)
+}
+
+type Employee {
+  id: ID
+  firstName: String @fake(type: firstName)
+  lastName: String @fake(type: lastName)
+  vote: Int @fake(type: number, options: { minNumber: 0, maxNumber: 0 })
+  duty: String @fake(type: jobTitle)
+  email: String @fake(type: email)
+  adress: String @fake(type: streetAddress)
+  phone: String @fake(type: phoneNumber)
+  imageURL: String
+    @examples(
+      values: [
+        "https://picsum.photos/200"
+        "https://picsum.photos/201"
+        "https://picsum.photos/202"
+        "https://picsum.photos/203"
+        "https://picsum.photos/204"
+        "https://picsum.photos/205"
+        "https://picsum.photos/206"
+        "https://picsum.photos/207"
+        "https://picsum.photos/208"
+        "https://picsum.photos/209"
+        "https://picsum.photos/210"
+        "https://picsum.photos/211"
+        "https://picsum.photos/212"
+        "https://picsum.photos/213"
+        "https://picsum.photos/214"
+        "https://picsum.photos/215"
+      ]
+    )
+}

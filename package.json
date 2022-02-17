@@ -2,15 +2,23 @@
   "name": "eom",
   "private": true,
   "scripts": {
+    "prepare": "start npx graphql-faker && start npm run dev && start http://localhost:3000",
+    "graphql": "npx graphql-faker",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "@reduxjs/toolkit": "^1.7.2",
+    "graphql-faker": "^2.0.0-rc.25",
     "next": "12.0.10",
+    "prop-types": "^15.8.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.6",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "eslint": "8.9.0",
